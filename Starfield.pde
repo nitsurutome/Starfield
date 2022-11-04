@@ -35,18 +35,16 @@ class Smoke extends Particle //inherits from Particle
   }
 }
 Particle [] par;
-Smoke [] smo;
 
 void setup()
 {
   size(500, 500);
   noStroke();
   par = new Particle[100];
-  smo = new Smoke[20];
   for (int i = 0; i < par.length; i++)
     par[i] = new Particle();
-  for (int i = 0; i < smo.length; i++)
-    smo[i] = new Smoke();
+  for (int i = 0; i < 20; i++)
+    par[i] = new Smoke();
 }
 
 
