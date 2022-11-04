@@ -35,23 +35,27 @@ class Smoke extends Particle //inherits from Particle
   }
 }
 Particle [] par;
+//Smoke [] smo;
 
 void setup()
 {
   size(500, 500);
   noStroke();
   par = new Particle[100];
+  // smo = new Smoke[20];
   for (int i = 0; i < par.length; i++)
     par[i] = new Particle();
   for (int i = 0; i < 20; i++)
     par[i] = new Smoke();
+  //  for (int i = 0; i < smo.length; i++)
+  //    smo[i] = new Smoke();
 }
 
 
 void draw()
 {
   background(0);
-  fill(255,255,0);
+  fill(255, 255, 0);
   ellipse(104, 237, 7, 7);
   ellipse(189, 469, 7, 7);
   ellipse(314, 308, 7, 7);
@@ -64,26 +68,23 @@ void draw()
   ellipse(230, 150, 7, 7);
   ellipse(480, 460, 7, 7);
   ellipse(40, 450, 7, 7);
-    for (int i = 0; i < par.length; i++) {
-      par[i].move();
-      par[i].show();
-    }
-    for (int i = 0; i < smo.length; i++) {
-      smo[i].move();
-      smo[i].show();
-    }
-    fill(160, 152, 152);
-    rect(235, 310, 30, 100);
-    fill(255,0,0);
-    triangle(235,310,265,310,250,280);
-    fill(0);
-    ellipse(250, 340, 20, 20);
-    fill(160, 152, 152);
-    ellipse(250, 340, 18, 18);
-    fill(0);
-    ellipse(250, 340, 13, 13);
-    fill(255,0,0);
-    triangle(245,420,255,420,250,390);
-    triangle(230,420,235,420,235,390);
-    triangle(270,420,265,420,265,390);
+  for (int i = 0; i < par.length; i++) {
+    par[i].move();
+    par[i].show();
   }
+
+  fill(160, 152, 152);
+  rect(235, 310, 30, 100);
+  fill(255, 0, 0);
+  triangle(235, 310, 265, 310, 250, 280);
+  fill(0);
+  ellipse(250, 340, 20, 20);
+  fill(160, 152, 152);
+  ellipse(250, 340, 18, 18);
+  fill(0);
+  ellipse(250, 340, 13, 13);
+  fill(255, 0, 0);
+  triangle(245, 420, 255, 420, 250, 390);
+  triangle(230, 420, 235, 420, 235, 390);
+  triangle(270, 420, 265, 420, 265, 390);
+}
